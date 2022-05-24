@@ -7,14 +7,18 @@
 출력 : 만들 수 없는 최솟값
 """
 
+import sys
+
+input = sys.stdin.readline
+
 n = int(input())
-data = list(map(int, input().split()))
+data = list(map(int,input().split()))
 data.sort()
 
-ans = 1
-for x in data:
-    if ans<x:
+target = 1
+for i in data:
+    if target < i:
         break
-    ans += x
+    target += i
 
-print(ans)
+print(target)
