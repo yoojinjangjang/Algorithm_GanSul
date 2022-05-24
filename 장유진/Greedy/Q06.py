@@ -6,25 +6,30 @@
 
 
 def solution(food_times, k):
-    idx = 0
-    n = len(food_times)
-    for i in range(k):
-        count = 0
-        while food_times[idx % n] == 0:
-            idx += 1
-            count += 1
-            print(food_times)
-            print(count)
-            if count > n+1:
-                return -1
+    answer = 0
 
+    while True:
+        count = len(food_times) - food_times.count(0)
+        if count > k:
+            break
+        elif count == 0:
+            return -1
+        k -= count
+        for i in range(len(food_times)):
+            if food_times[i] != 0:
+                food_times[i] -= 1
         print(food_times)
-        food_times[idx % n] -= 1
-        idx += 1
+        print(k, 'count = ', count)
 
-    if food_times[(idx % len(food_times))] == 0:
-        return -1
-    else:
-        return idx % len(food_times)+1
+    print(food_times)
+    print(k)
+    for i in range(len(food_times)):
+        if food_times[i] != 0 and k == 0:
+            return i + 1
+        if food_times[i] != 0:
+            k -= 1
 
-print(solution([3,1,0,5,2],10))
+
+print('answer = ', solution([3, 1, 0, 5, 2], 10))
+print('--------------------')
+print('answer = ', solution([3, 1, 2], 5))
