@@ -9,6 +9,6 @@ money_list.sort()
 result = [False] * max(money_list)
 
 for money in money_list:
-    result[money - 1] = True # if has --> true
+    result[money - 1] = True # 포기
     
 
