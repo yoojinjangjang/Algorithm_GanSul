@@ -19,9 +19,11 @@ temp = K[0]
 result = 1
 
 for i in range(1, N):
+    #이전 끝나는 시간보다 현재 끝나는 시간이 더 빠른 경우
     if temp[1] > K[i][1]:
         temp = K[i]
 
+    #이전 끝나는 시간 이후에 현재 시작 시간이 시작 되는 경우
     elif temp[1] <= K[i][0]:
         temp = K[i]
         result += 1
