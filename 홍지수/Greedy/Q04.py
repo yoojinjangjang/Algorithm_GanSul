@@ -11,7 +11,7 @@ comb = []
 ans = []
 key = 1
 
-for i in range(1, N):
+for i in range(1, N + 1):
     comb = list(itertools.combinations(arr, i))
     for j in comb:
         ans.append(sum(j))
