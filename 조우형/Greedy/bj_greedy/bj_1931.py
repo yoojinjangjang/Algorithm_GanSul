@@ -12,7 +12,7 @@ N = int(sys.stdin.readline())
 K = []
 
 for i in range(N):
-    K.append(tuple(map(int, sys.stdin.readline().split())))
+    K.append(list(map(int, sys.stdin.readline().split())))
 
 K.sort()
 

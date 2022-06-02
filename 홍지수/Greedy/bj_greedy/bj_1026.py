@@ -10,5 +10,5 @@ cnt = 0
 
 for i in range(N):
     cnt += A[i] * B[i]
-
+n 
 print(cnt)
