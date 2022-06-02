@@ -5,6 +5,7 @@ N = int(sys.stdin.readline())
 data = []
 for i in range(N):
     data.append(list(map(int, sys.stdin.readline().split())))
+data.sort(key=lambda row: row[0])
 data.sort(key=lambda row: row[1])
 
 end = data[0][1]
