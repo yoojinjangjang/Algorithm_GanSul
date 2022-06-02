@@ -21,10 +21,10 @@ temp.append(K[0])
 idx = 0
 
 for i in range(1, N):
-    #이전 끝나는 시간보다 현재 끝나는 시간이 빠른 경우
+    # 이전 끝나는 시간보다 현재 끝나는 시간이 빠른 경우
     if temp[idx][1] > K[i][1]:
         temp[idx] = K[i]
-    #이전 끝나는 시간 이후에 현재 시작 시간인 경우
+    # 이전 끝나는 시간 이후에 현재 시작 시간인 경우
     elif temp[idx][1] <= K[i][0]:
         temp.append(K[i])
         idx += 1
