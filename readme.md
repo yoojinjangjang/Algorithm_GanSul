@@ -5,17 +5,17 @@
 
 ### 🤣 
 
-| 이름    |  장유진       |     조우형    |     홍지수     |     신혜영      |     안검성     |
-| :----: | :-----------: | :-----------: | :-----------: | :-------------: | :-----------: |
-|    **GitHub**     | [yoojinjangjang](https://github.com/yoojinjangjang) | [wxxhyeong](https://github.com/wxxhyeong) | [g2da](https://github.com/g2da) | [hye0e](https://github.com/hye0e) | [gs97ahn](https://github.com/gs97ahn) |
-|  **언어**  | <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> | <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> |<img src="https://img.shields.io/badge/Python-F2D9ED?style=for-the-badge&logo=Python&logoColor=white">   |  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white">  | <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> |
+|       이름        |  장유진       |     조우형    |     홍지수     |     신혜영      |     안검성     |
+|:---------------:| :-----------: | :-----------: | :-----------: | :-------------: | :-----------: |
+|   **GitHub**    | [yoojinjangjang](https://github.com/yoojinjangjang) | [wxxhyeong](https://github.com/wxxhyeong) | [g2da](https://github.com/g2da) | [hye0e](https://github.com/hye0e) | [gs97ahn](https://github.com/gs97ahn) |
+|     **언어**      | <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> | <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> |<img src="https://img.shields.io/badge/Python-F2D9ED?style=for-the-badge&logo=Python&logoColor=white">   |  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white">  | <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> |
 | 1주차 ( 22.5.16 ) |   🙆‍   |    🙆‍     |     🙆‍    |     🙆‍     |   🙆‍   |
 | 2주차 ( 22.5.23 ) |   🙆‍   |    🙆‍     |     🙆‍   |    🏃‍     |    🏃‍   |
-| 3주차 ( 22.5.30 ) |      |         |        |          |        |
-| 4주차 ( 22.6.6 )  |      |         |        |          |        |
-| 5주차 ( 22.6.13 ) |      |         |        |          |        |
-| 6주차 ( 22.6.20 ) |      |         |        |          |        |
-| 7주차 ( 22.6.27 ) |      |         |        |          |        |
+| 3주차 ( 22.6.22 ) |      |         |        |          |        |
+| 4주차 ( 22.6.29 ) |      |         |        |          |        |
+| 5주차 ( 22.7.6 )  |      |         |        |          |        |
+| 6주차 ( 22.7.13 ) |      |         |        |          |        |
+| 7주차 ( 22.7.20 ) |      |         |        |          |        |
 
 🙆‍ : 한 주 동안 다 했어요  
 🏃‍ : 바쁜 한 주 였어요  
