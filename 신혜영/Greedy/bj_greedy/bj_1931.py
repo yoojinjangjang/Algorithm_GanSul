@@ -15,3 +15,4 @@ for i in range(1, N):
         result += 1
 
 print(result)
+

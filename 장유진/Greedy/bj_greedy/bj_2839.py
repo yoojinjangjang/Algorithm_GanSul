@@ -17,7 +17,6 @@ while n%5 != 0:
         break
     n -= 3
     ans += 1
-    print(n,'ans=',ans)
 
 if n%5==0:
     ans += (n//5)
