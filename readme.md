@@ -11,7 +11,7 @@
 |     **언어**      | <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> | <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> |<img src="https://img.shields.io/badge/Python-F2D9ED?style=for-the-badge&logo=Python&logoColor=white">   |  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white">  | <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> |
 | 1주차 ( 22.5.16 ) |   🙆‍   |    🙆‍     |     🙆‍    |     🙆‍     |   🙆‍   |
 | 2주차 ( 22.5.23 ) |   🙆‍   |    🙆‍     |     🙆‍   |    🏃‍     |    🏃‍   |
-| 3주차 ( 22.6.22 ) |      |         |        |          |        |
+| 3주차 ( 22.6.22 ) |      |         |        |    🏃‍      |    🏃‍    |
 | 4주차 ( 22.6.29 ) |      |         |        |          |        |
 | 5주차 ( 22.7.6 )  |      |         |        |          |        |
 | 6주차 ( 22.7.13 ) |      |         |        |          |        |
