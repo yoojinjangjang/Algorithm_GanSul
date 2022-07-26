@@ -12,11 +12,11 @@
 |     **언어**      | <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> | <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> |<img src="https://img.shields.io/badge/Python-F2D9ED?style=for-the-badge&logo=Python&logoColor=white">   |  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white">  | <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> |
 | 1주차 ( 22.5.16 ) |   🙆‍   |    🙆‍     |     🙆‍    |     🙆‍     |   🙆‍   |
 | 2주차 ( 22.5.23 ) |   🙆‍   |    🙆‍     |     🙆‍   |    🏃‍     |    🏃‍   |
-| 3주차 ( 22.6.22 ) |      |         |        |          |        |
-| 4주차 ( 22.7.6 ) |      |         |        |          |        |
-| 5주차 ( 22.7.13 )  |      |         |        |          |        |
-| 6주차 ( 22.7.20 ) |      |         |        |          |        |
-| 7주차 ( 22.7.27 ) |      |         |        |          |        |
+|      ....       |   🗑️   |      🗑️   |    🗑️    |    🗑️      |  🗑️      |
+| 4주차 ( 22.7.27 ) |      |         |        |          |        |
+| 5주차 ( 22.8.3 )  |      |         |        |          |        |
+| 6주차 ( 22.8.10)  |      |         |        |          |        |
+| 7주차 ( 22.8.17)  |      |         |        |          |        |
 
 🙆‍ : 한 주 동안 다 했어요  
 🏃‍ : 바쁜 한 주 였어요  
