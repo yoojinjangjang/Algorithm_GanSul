@@ -18,6 +18,7 @@ t = 1
 snake_location = [[0, 0]]
 direction = "r"
 snake_head = [0, 0]
+hit_body = False
 
 while 1:
     if len(l_location) > 0:
@@ -54,10 +55,15 @@ while 1:
 
     # Hit snake body
     if snake_location[-1] == snake_head:
+        hit_body = True
         break
     for i in range(0, len(snake_location) - 1):
         if snake_head == snake_location[i]:
+            hit_body = True
             break
+
+    if hit_body == True:
+        exit
 
     # Out of bound
     if (
