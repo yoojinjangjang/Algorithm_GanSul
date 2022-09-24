@@ -63,7 +63,7 @@ while 1:
             break
 
     if hit_body == True:
-        exit
+        break
 
     # Out of bound
     if (
