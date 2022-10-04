@@ -17,9 +17,31 @@ result = 10
 from collections import deque
 import sys
 n, m = map(int, sys.stdin.readline().split())
-maze = deque
+maze = []
+step = 0
+dx = [-1, 1, 0, 0]
+dy = [0, 0, 1, -1]
 for i in range(n):
-    maze.append(deque(map(int, input())))
+    maze.append(list(map(int, input())))
 
+queue = deque()
+queue.append((0,0))
 
+while queue: #queue 빌 때까지
+    x, y = queue.popleft()
 
+    for i in range(4):
+        nx = x + dx[i]
+        ny = y + dy[i]
+
+        if nx < 0 or ny < 0 or nx >= n or ny >= m:
+            continue
+
+        if maze[nx][ny] == 0:
+            continue
+
+        if maze[nx][ny] == 1:
+            queue.append((nx, ny))
+            maze[nx][ny] = maze[x][y] + 1
+
+print(maze[n-1][m-1])
