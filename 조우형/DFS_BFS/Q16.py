@@ -6,7 +6,8 @@ DFS/BFS 기출 문제 16. 연구소
 인접한 빈칸으로 모두 퍼져나갈 수 있습니다. 새로 세울 수 있는 벽의 개수는 3개이며,
 꼭 3개를 세워야합니다.
 벽 3개를 적절한 위치에 세워서 바이러스가 퍼질 수 없는 안전 영역 크기의 최댓값을 구하는 프로그램을 작성하세요.
-
+1 = 벽
+2 = 바이러스
 Ex)
 7 7
 2 0 0 0 1 1 0
@@ -17,12 +18,31 @@ Ex)
 0 1 0 0 0 0 0
 0 1 0 0 0 0 0
 '''
-import sys
-n, m = map(int, sys.stdin.readline().split())
+#dfs 로 해결
+
+n, m = map(int, input().split())
 lab = []
-for _ in range(n):
-    lab.append(list(map(int, sys.stdin.readline().split())))
-
+temp = [[]*m for _ in range(n)]
 wall = 0
+for _ in range(n):
+    lab.append(list(map(int, input().split())))
+print(lab)
+def dfs(wall):
 
-for
+    if wall == 3:
+        for i in range(n):
+            for j in range(m):
+                temp[i][j] = lab[i][j]
+        for i in range(n):
+            for j in range(m):
+                if temp[i][j] == 2:
+                    pass
+
+    else:
+        for i in range(n):
+            for j in range(m):
+                if lab[i][j] == 0:
+                    lab[i][j] = 1
+                    wall += 1
+                    dfs(wall)
+                    lab[i][j] = 0
