@@ -17,12 +17,31 @@ Ex)
 0 1 0 0 0 0 0
 0 1 0 0 0 0 0
 '''
-import sys
-n, m = map(int, sys.stdin.readline().split())
+#dfs 로 해결
+
+n, m = map(int, input().split())
 lab = []
-for _ in range(n):
-    lab.append(list(map(int, sys.stdin.readline().split())))
-
+temp = [[]*m for _ in range(n)]
 wall = 0
+for _ in range(n):
+    lab.append(list(map(int, input().split())))
+print(lab)
+def dfs(wall):
 
-for
+    if wall == 3:
+        for i in range(n):
+            for j in range(m):
+                temp[i][j] = lab[i][j]
+        for i in range(n):
+            for j in range(m):
+                if temp[i][j] == 2:
+                    pass
+
+    else:
+        for i in range(n):
+            for j in range(m):
+                if lab[i][j] == 0:
+                    lab[i][j] = 1
+                    wall += 1
+                    dfs(wall)
+                    lab[i][j] = 0
