@@ -22,13 +22,38 @@ Ex)
 
 n, m = map(int, input().split())
 lab = []
-temp = [[]*m for _ in range(n)]
-wall = 0
+temp = [[0]*m for _ in range(n)]
+result = 0
 for _ in range(n):
     lab.append(list(map(int, input().split())))
-print(lab)
-def dfs(wall):
 
+dx = [-1, 1, 0, 0]
+dy = [0, 0, -1, 1]
+
+def virus(x, y):
+
+    for i in range(4):
+        nx = x + dx[i]
+        ny = y + dy[i]
+        if nx < 0 or nx >= n or ny < 0 or ny >= m:
+            continue
+
+        if temp[nx][ny] == 0:
+            temp[nx][ny] = 2
+            virus(nx, ny)
+def count_0():
+
+    zero_check = 0
+    for i in range(n):
+        for j in range(m):
+            if temp[i][j] == 0:
+                zero_check += 1
+
+    return zero_check
+
+
+def dfs(wall):
+    global result
     if wall == 3:
         for i in range(n):
             for j in range(m):
@@ -36,7 +61,10 @@ def dfs(wall):
         for i in range(n):
             for j in range(m):
                 if temp[i][j] == 2:
-                    pass
+                    virus(i, j)
+
+        result = max(count_0(), result)
+        return
 
     else:
         for i in range(n):
@@ -46,3 +74,7 @@ def dfs(wall):
                     wall += 1
                     dfs(wall)
                     lab[i][j] = 0
+                    wall -= 1
+
+dfs(0)
+print(result)
