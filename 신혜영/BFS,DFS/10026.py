@@ -1,5 +1,5 @@
 import sys
-
+sys.setrecursionlimit(1000000)
 input = sys.stdin.readline
 
 N = int(input())
@@ -19,7 +19,6 @@ def dfs(x, y, color, visited):
     return False
 
 cnt = 0
-cnt2 = 0
 
 for i in range(N):
     for j in range(N):
@@ -29,10 +28,11 @@ for i in range(N):
             cnt += 1
         if dfs(i, j, 'B', visited):
             cnt += 1
-            cnt2 += 1
+
 
 # 초기화
 visited2 = [[False] * N for _ in range(N)]
+cnt2 = 0
 
 # 변경
 for i in range(N):
@@ -40,9 +40,11 @@ for i in range(N):
         if graph[i][j] == 'R':
             graph[i][j] = 'G'
 
-
 for i in range(N):
     for j in range(N):
+        if dfs(i, j, 'B', visited2):
+            cnt2 += 1
+
         if dfs(i, j, 'G', visited2):
             cnt2 += 1
 
