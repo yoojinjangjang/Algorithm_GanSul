@@ -29,6 +29,7 @@ color_normal = {"R": ["R"], "G": ["G"], "B": ["B"]}
 
 def get_num(color_yn):
     visited = [[False] * n for _ in range(n)]  # 중첩 list 생성시 잘못된 방법으로 생성하면 서로가 서로를 공유함 ! 안돼
+    visited = [[False]*n]*n
     dy = [-1, 1, 0, 0]
     dx = [0, 0, -1, 1]
     space_num = 0
