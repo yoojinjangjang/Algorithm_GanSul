@@ -23,7 +23,6 @@ dx = [-1, 1, 0, 0]
 dy = [0, 0, 1, -1]
 for i in range(n):
     maze.append(list(map(int, input())))
-
 queue = deque()
 queue.append((0,0))
 
