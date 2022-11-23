@@ -1,3 +1,7 @@
+'''
+DFS/BFS 백준 10026. 적록색약
+'''
+
 from collections import deque
 
 def BFS(x,y):
