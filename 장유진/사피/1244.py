@@ -17,5 +17,7 @@ for test_case in range(1, T + 1):
     numbers, rotation_cnt = input().split()
     rotation_cnt = int(rotation_cnt)
     numbers = list(map(int,list(numbers.strip())))
-    for i in range(rotation_cnt):
+    for _ in range(rotation_cnt):
+        # 모든 조합 ? 을 찾아서 2개의 짝 (?) 가장 큰 수와 가장 작은수가 짝지어진거
+        print()
 
