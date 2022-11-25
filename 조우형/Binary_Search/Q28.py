@@ -9,3 +9,24 @@ Array = [-15, -4, 2, 8, 13]
 
 output = 2
 '''
+n = int(input())
+array = list(map(int, input().split()))
+
+start = 0
+end = len(array) -1
+result = -1
+
+while start <= end:
+    mid = (start+end)//2
+    #print(mid)
+    if mid == array[mid]:
+        result = mid
+        break
+
+    if mid < array[mid]:
+        end = mid-1
+    else:
+        start = mid + 1
+
+
+print(result)
