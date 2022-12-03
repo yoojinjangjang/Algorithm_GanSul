@@ -16,4 +16,4 @@ def solution(N, stages):
 
 
 if __name__ == '__main__':
-    print(solution(5,[2, 1, 2, 6, 2, 4, 3, 3]))
+    print(solution(5,[2,MMM 1, 2, 6, 2, 4, 3, 3]))
