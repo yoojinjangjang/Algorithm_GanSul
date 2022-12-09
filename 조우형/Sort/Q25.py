@@ -21,7 +21,7 @@ def solution(N, stages):
     result = {}
 
     for i in range(1, N+1):
-        result[i] = stages.count(i) / len(stages)
+        result[i] = stages.count(i) / len(stages)`
 
         for j in range(len(stages)):
             if stages[j] != i:
