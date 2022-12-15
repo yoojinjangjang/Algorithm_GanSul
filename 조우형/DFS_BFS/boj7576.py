@@ -17,82 +17,70 @@ output
 8
 '''
 from collections import deque
-m, n = map(int,input().split())
+
+m, n = map(int, input().split())
 graph = []
 for i in range(n):
-    graph.append(list(map(int,input().split())))
-print("done")
-def check_tomato(m, n, graph):
-    yes_tomato = 0
-    no_tomato = 0
+    graph.append(list(map(int, input().split())))
+
+
+def check_state(n, m, graph):
+    tomato_number = 0
+    yes_tomato = 0  # 익은 토마토
 
     for i in range(n):
         for j in range(m):
-            if graph[i][j] == 1:
-                yes_tomato += 1
-            elif graph[i][j] == -1:
-                no_tomato
+            if graph[i][j] != -1:
+                if graph[i][j] == 1:
+                    yes_tomato += 1
+                tomato_number += 1
 
-    if (m*n)-no_tomato == yes_tomato:
+    # 모든 토마토가 익어있는 상태면 0
+    if tomato_number == yes_tomato:
         return 0
-    elif yes_tomato == 0:
+    # 토마토가 모두 익지 못하는 상황이면 -1
+    else:
         return -1
 
 
-
-
-def bfs(m, n, graph):
-    day = []
+def bfs(n, m, graph):
+    queue = deque()
+    day_queue = deque()
+    res = 0
 
     for i in range(n):
         for j in range(m):
             if graph[i][j] == 1:
-                day.append((i, j))
-
-    queue = deque()
-    queue.append(day)
+                queue.append((i, j))
 
     dx = [0, 0, 1, -1]
     dy = [1, -1, 0, 0]
 
-    res = 0
     while queue:
-        print(queue)
-        q = queue.popleft()
-        day = []
+        x, y = queue.popleft()
 
-        for i in q:
-            x = i[0]
-            y = i[1]
-            print(x, y)
+        for i in range(4):
+            nx = x + dx[i]
+            ny = y + dy[i]
 
-            for j in range(4):
-                nx = x + dx[j]
-                ny = y + dy[j]
-                print("nx = {}, ny = {}".format(nx, ny))
+            if 0 <= nx < n and 0 <= ny < m:
+                if graph[nx][ny] == 0:
+                    graph[nx][ny] = 1
+                    day_queue.append((nx, ny))
 
-                if 0 <= nx < n and 0 <= ny < m:
-                    if graph[nx][ny] == 0:
-                        graph[nx][ny] = 1
-                        day.append((nx, ny))
-                print("뿅", day)
-        print(day)
-        if len(day) != 0:
-            queue.append(day)
-        res += 1
+        if not queue:
+            for _ in range(len(day_queue)):
+                queue.append(day_queue.popleft())
+            res += 1
 
-    if check_tomato(m, n, graph) == 0:
-        return res
-    else:
+    if check_state(n, m, graph) == -1:
         return -1
+    else:
+        return res-1
 
-if check_tomato(m, n, graph) == 0:
-    print(0)
-elif check_tomato(m,n,graph) == -1:
-    print(-1)
+
+if check_state(n, m, graph) == 0:
+    print("0")
 else:
-    print(bfs(m,n,graph))
-
-
-
+    print(bfs(n,m,graph))
 
