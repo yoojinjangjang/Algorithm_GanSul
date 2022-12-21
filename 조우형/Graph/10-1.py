@@ -10,15 +10,15 @@
 ```2``` 모든 union(합집합) 연산을 처리할 때까지 ```1```번 과정을 반복한다.
 '''
 
-
+#특정 원소가 속한 집합을 찾기
 def find_parents(number):
-
+    #루트 노드가 아니라면, 루트 노드를 찾을 때까지 재귀적으로 호출
     if parents[number] != number:
         return find_parents(parents[number])
 
     return number
 
-
+#두 원소가 속한 집합을 합치기
 def union(a, b):
     a = find_parents(a)
     b = find_parents(b)
@@ -28,20 +28,14 @@ def union(a, b):
     else:
         parents[a] = b
 
-
+#노드의 개수와 간선의 개수 입력받기
 n, k = map(int, input().split())
-numbers = [i for i in range(n + 1)]
-unions = []
+
+#부모 테이블 생성
+parents = [i for i in range(n + 1)] #부모 테이블 초기화
+
 for i in range(k):
     one, two = map(int, input().split())
-    unions.append([one, two])
-
-parents = [i for i in range(n + 1)]
-
-for i in unions:
-    one = i[0]
-    two = i[1]
-
     union(one, two)
 
 print("각 원소가 속한 집합 : ", end="")
