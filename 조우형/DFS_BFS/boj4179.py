@@ -31,21 +31,28 @@ for i in range(r):
 j_queue = deque() #시작 지점 큐
 f_queue = deque() #불난 지점 큐
 
-INF = 1e9 # 혜영이가 이동할 수 없는 곳의 값으로 가장 큰 값을 사용, 해당 값은 불과 벽을 표현할 때 사용
-fire_state = [[INF] * c for _ in range(r)]
+fire_state = [[True] * c for _ in range(r)]
+j_state = [[-1]*c for _ in range(r)]
+
+for i in maze:
+    print(i)
 
 #시작점과 불난 지점 찾기 및 방문 그래프 초기화
 for i in range(r):
     for j in range(c):
-        if maze[i][j] == "j":
+        if maze[i][j] == "J":  #J가 출발하는 곳의 화재 상태와 J상태 초기값 세팅
             j_queue.append((i, j))
-            fire_state[i][j] = 0
-        elif maze[i][j] == "f":
+            j_state[i][j] = 0
+        elif maze[i][j] == "F":
             f_queue.append((i, j))
-        elif maze[i][j] == ".":
-            fire_state[i][j] = -1
+            fire_state[i][j] = False
 
+print("초기 fire state @@@@@@@@@@@@@@@@@@@@@@@@@")
 for i in fire_state:
+    print(i)
+
+print("초기 j_state @@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+for i in j_state:
     print(i)
 
 # 이동 방향
@@ -66,23 +73,35 @@ def bfs():
 
                 if fx < 0 or fx >= r or fy < 0 or fy >= c: # 이동한 불의 좌표가 그래프를 벗어났으면 다음 방향으로 넘어간다.
                     continue
-                if fire_state[fx][fy] < INF: #이동한 불의 좌표가 그래프를 벗어나지 않았고, 이동한 불의 좌표가 번질 수 있는 곳이면 값을 갱신해준다.
-                    fire_state[fx][fy] = INF
+                if maze[fx][fy] != "#" and fire_state[fx][fy]:
+                    fire_state[fx][fy] = False
                     f_queue.append((fx, fy))
 
         for _ in range(len(j_queue)): #혜영이가 있는 곳들에 대한 bfs를 수행한다.
             x, y = j_queue.popleft()
+            print("x = {}, y = {}".format(x,y))
 
             for i in range(4):
                 jx = x + dx[i]
                 jy = y + dy[i]
 
                 if jx >= 0 and jx < r and jy >= 0 and jy < c:
-                    if fire_state[jx][jy] > fire_state[x][y] + 1 or fire_state[jx][jy] == -1: #해당 위치까지 거리보다 더 짧거나, 이동할 수 있는 곳이라면 최단거리를 갱신해준다.
-                        fire_state[jx][jy] = fire_state[x][y] + 1
+                    if fire_state[jx][jy] and j_state[jx][jy] == -1 and maze[jx][jy] == ".": #해당 위치까지 거리보다 더 짧거나, 이동할 수 있는 곳이라면 최단거리를 갱신해준다.
+                        j_state[jx][jy] = j_state[x][y] + 1
                         j_queue.append((jx, jy))
                 if jx < 0 or jx >= r or jy < 0 or jy >= c:
-                    return j_queue[jx][jy]+1
+                    print(jx)
+                    print(jy)
+                    return j_state[x][y]+1
+
+        print("fire_state @@@@@@@@@@@@@@@@@@@@@@")
+        for i in fire_state:
+            print(i)
+        print("j_state @@@@@@@@@@@@@@@@@@@@@@@@@")
+
+        for i in j_state:
+            print(i)
+
 
     return "IMPOSSIBLE"
 
